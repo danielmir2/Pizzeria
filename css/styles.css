@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'liga';
+    padding: 5px;
+    color: yellow;
+    cursor: pointer;
+}
+
+nav{
+    background-color: black;
+}
+
+.navbar {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.icon {
+    fill:white;
+    cursor: pointer;
+}
+
+.navbar input,
+.nav-menu,
+.dropdown {
+    display: none;
+}
+
+[id^=btn]:checked+ul {
+    display: block;
+    z-index: 9999;
+}
+
+.nav-menu {
+    background-color: black;
+    position: absolute;
+    top: 160px;
+    left: 0;
+    right: 0;
+    list-style: none;
+}
+
+.nav-item a,
+.drop-item a,
+.show {
+    color: white;
+    line-height: 60px;
+    /* font-size: 34px; */
+    text-decoration: none;
+}
+
+.nav-menu a:hover,
+.show:hover {
+    color: #1b1e3dfd;
+}
+
+.header-contact, .header-panier {
+    color: white;
+}
+
+.logo img{
+    width: 180px;
+}
+
+@media screen and (min-width: 1024px) {
+    .icon {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        display: initial;
+        position: static;
+        flex: 1;
+        text-align: center;
+        margin-right: 15%;
+        animation-duration: 1.5s;
+        animation-name: backInDown;
+    }
+
+    .nav-item {
+        display: inline-block;
+        margin-left: 20px;
+        position: relative;
+        list-style: none;
+    }
+
+    .dropdown {
+        position: absolute;
+        background-color: black;
+        top: 90px;
+        left: 0;
+        padding-right: 40px;
+        width: max-content;
+    }
+
+    .nav-item a,
+    .drop-item a,
+    .show {
+        font-size: 34px;
+        justify-content: center;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 15vh;
+        row-gap: 80px;
+        column-gap: 50px;
+    }
+}
