@@ -1,0 +1,123 @@
+:root{
+    font-size: 14px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+h1, h2{
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-transform: uppercase;
+}
+
+header{
+    height: 100vh;
+    nav{
+        background-color: #121618;
+        color: white;
+        text-align: center;
+        padding: 30px;
+        position: relative;
+        address, #panier, #btn, ul{
+            display: none;
+        }
+        img{
+            height: 90px;
+        }
+        label{
+            font-size: 2.5rem;
+            position: absolute;
+            top: 75px;
+            transform: translateY(-50%);
+            right: 20px;
+            cursor: pointer;
+            .la-times{
+                display: none;
+            }
+        }
+        #btn:checked + ul{
+            display: block;
+            text-align: left;
+            border-top: 1px solid white;
+            padding: 0;
+            list-style-type: none;
+            li{
+                margin-top: 1rem;
+                a{
+                    &::after{
+                        content: ">";
+                        margin-left: 10px;
+                    }
+                }
+            }
+            + label{
+                .la-times{
+                    display: inline;
+                }
+                .la-bars{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    #diaporama{
+        background-image: url(../images/slide_1.jpg);
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        height: calc(100vh - 150px);
+        position: relative;
+        img{
+            width: 50%;
+        }
+        h1, h2{
+            font-weight: normal;
+            margin: 0;
+        }
+        h1{
+            font-size: 2.5rem;
+        }
+        h2{
+            border-bottom: 4px solid white;
+            margin: 0 2rem 0;
+            padding-bottom: .5rem;
+        }
+        a{
+            padding: .5rem 1rem;
+            border: 1px solid white;
+            margin: .5rem;
+            display: inline-block;
+        }
+        #view{
+            background-color: #ffc851;
+            border-color: #ffc851;
+            color: #121618;
+        }
+        i{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            left: 10px;
+            cursor: pointer;
+        }
+        .la-arrow-right{
+            left: unset;
+            right: 10px;
+        }
+    }
+}

@@ -1,135 +1,118 @@
+:root {
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'PT Sans Narrow', sans-serif;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 48px;
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    font-feature-settings: 'liga';
-    padding: 5px;
-    color: yellow;
-    cursor: pointer;
+a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-nav{
-    background-color: black;
+h1, h2 {
+  font-family: "PT Sans Narrow", sans-serif;
+  text-transform: uppercase;
 }
 
-.navbar {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+header {
+  height: 100vh;
 }
-
-.icon {
-    fill:white;
-    cursor: pointer;
+header nav {
+  background-color: #121618;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  position: relative;
 }
-
-.navbar input,
-.nav-menu,
-.dropdown {
-    display: none;
+header nav address, header nav #panier, header nav #btn, header nav ul {
+  display: none;
 }
-
-[id^=btn]:checked+ul {
-    display: block;
-    z-index: 9999;
+header nav img {
+  height: 90px;
 }
-
-.nav-menu {
-    background-color: black;
-    position: absolute;
-    top: 160px;
-    left: 0;
-    right: 0;
-    list-style: none;
+header nav label {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 75px;
+  transform: translateY(-50%);
+  right: 20px;
+  cursor: pointer;
 }
-
-.nav-item a,
-.drop-item a,
-.show {
-    color: white;
-    line-height: 60px;
-    /* font-size: 34px; */
-    text-decoration: none;
+header nav label .la-times {
+  display: none;
 }
-
-.nav-menu a:hover,
-.show:hover {
-    color: #1b1e3dfd;
+header nav #btn:checked + ul {
+  display: block;
+  text-align: left;
+  border-top: 1px solid white;
+  padding: 0;
+  list-style-type: none;
 }
-
-.header-contact, .header-panier {
-    color: white;
+header nav #btn:checked + ul li {
+  margin-top: 1rem;
 }
-
-.logo img{
-    width: 180px;
+header nav #btn:checked + ul li a::after {
+  content: ">";
+  margin-left: 10px;
 }
-
-@media screen and (min-width: 1024px) {
-    .icon {
-        display: none;
-    }
-
-    .navbar {
-        justify-content: space-between;
-    }
-
-    .nav-menu {
-        display: initial;
-        position: static;
-        flex: 1;
-        text-align: center;
-        margin-right: 15%;
-        animation-duration: 1.5s;
-        animation-name: backInDown;
-    }
-
-    .nav-item {
-        display: inline-block;
-        margin-left: 20px;
-        position: relative;
-        list-style: none;
-    }
-
-    .dropdown {
-        position: absolute;
-        background-color: black;
-        top: 90px;
-        left: 0;
-        padding-right: 40px;
-        width: max-content;
-    }
-
-    .nav-item a,
-    .drop-item a,
-    .show {
-        font-size: 34px;
-        justify-content: center;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        margin-top: 15vh;
-        row-gap: 80px;
-        column-gap: 50px;
-    }
+header nav #btn:checked + ul + label .la-times {
+  display: inline;
 }
+header nav #btn:checked + ul + label .la-bars {
+  display: none;
+}
+header #diaporama {
+  background-image: url(../images/slide_1.jpg);
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  height: calc(100vh - 150px);
+  position: relative;
+}
+header #diaporama img {
+  width: 50%;
+}
+header #diaporama h1, header #diaporama h2 {
+  font-weight: normal;
+  margin: 0;
+}
+header #diaporama h1 {
+  font-size: 2.5rem;
+}
+header #diaporama h2 {
+  border-bottom: 4px solid white;
+  margin: 0 2rem 0;
+  padding-bottom: 0.5rem;
+}
+header #diaporama a {
+  padding: 0.5rem 1rem;
+  border: 1px solid white;
+  margin: 0.5rem;
+  display: inline-block;
+}
+header #diaporama #view {
+  background-color: #ffc851;
+  border-color: #ffc851;
+  color: #121618;
+}
+header #diaporama i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  left: 10px;
+  cursor: pointer;
+}
+header #diaporama .la-arrow-right {
+  left: unset;
+  right: 10px;
+}/*# sourceMappingURL=styles.css.map */
