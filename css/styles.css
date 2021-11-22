@@ -23,7 +23,7 @@ h1, h2 {
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
 }
 header nav {
   background-color: #121618;
@@ -115,4 +115,16 @@ header #diaporama i {
 header #diaporama .la-arrow-right {
   left: unset;
   right: 10px;
+}
+
+main {
+  text-align: center;
+}
+main #services {
+  background: url(../images/back_2.png) no-repeat center/cover;
+  padding: 2rem 0.5rem;
+}
+main #services h1 {
+  font-size: 2rem;
+  font-weight: normal;
 }/*# sourceMappingURL=styles.css.map */
