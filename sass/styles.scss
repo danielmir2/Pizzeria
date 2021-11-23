@@ -9,6 +9,7 @@
 body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    background-color: #121618;
 }
 
 a{
@@ -81,6 +82,20 @@ header{
         padding: 20px;
         height: calc(100vh - 150px);
         position: relative;
+        &::before{
+            content: "";
+            display: block;
+            height: 24px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(-45deg, #121618 12px, transparent 0), linear-gradient(45deg, #121618 12px, transparent 0);
+            transform: rotate(180deg);
+            background-repeat: repeat-x;
+            background-size: 10px 24px;
+        }
+
         img{
             width: 50%;
         }
@@ -125,12 +140,70 @@ header{
 // Main
 main{
     text-align: center;
+    h1{
+        font-size: 2rem;
+        font-weight: normal;
+    }
     #services{
         background: url(../images/back_2.png) no-repeat center / cover;
         padding: 2rem .5rem;
-        h1{
-            font-size: 2rem;
-            font-weight: normal;
+        position: relative;
+        &::after{
+            content: "";
+            display: block;
+            height: 24px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(-45deg, #121618 12px, transparent 0), linear-gradient(45deg, #121618 12px, transparent 0);
+            background-repeat: repeat-x;
+            background-size: 10px 24px;
+        }
+
+    }
+
+    #pizzas{
+        color: white;
+
+        img{
+            width: 70%;
+        }
+        article{
+            h1{
+                font-size: 1.5rem;
+            }
+            p{
+                line-height: 1.8rem;
+                &:last-child{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    text-align: center;
+    border-top: 1px solid #1d2326;
+    padding: 2rem .5rem;
+    color: white;
+    img{
+        width: 50%;
+    }
+    address{
+        font-style: normal;
+        margin: 1rem 0;
+        span{
+            color: silver;
+        }
+    }
+    ul{
+        // list-style-type: none;
+        padding: 0;
+        li{
+            display: inline;
+            margin: 0 10px;
         }
     }
 }

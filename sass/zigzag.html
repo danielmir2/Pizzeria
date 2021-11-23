@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 24px;
+            position: relative;
+        }
+        div::after{
+            content: "";
+            display: block;
+            height: 24px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(-45deg, #121618 12px, transparent 0), linear-gradient(45deg, #121618 12px, transparent 0);
+            transform: rotate(180deg);
+            background-repeat: repeat-x;
+            background-size: 10px 24px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
