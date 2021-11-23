@@ -178,7 +178,7 @@ footer {
   color: white;
 }
 footer img {
-  width: 50%;
+  height: 90px;
 }
 footer address {
   font-style: normal;
@@ -193,4 +193,125 @@ footer ul {
 footer ul li {
   display: inline;
   margin: 0 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+  header nav address, header nav #panier {
+    flex: 1;
+  }
+  header nav section {
+    flex: 4;
+  }
+  header nav address, header nav #panier, header nav ul {
+    display: block;
+  }
+  header nav label {
+    display: none;
+  }
+  header nav address {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  header nav address span {
+    font-size: 3rem;
+  }
+  header nav address p {
+    color: silver;
+    font-size: 0.8rem;
+    flex: 1;
+  }
+  header nav address p::first-line {
+    color: white;
+    font-size: 1rem;
+  }
+  header nav ul {
+    padding: 0;
+    margin-top: 40px;
+  }
+  header nav ul li {
+    display: inline;
+    margin: 25px;
+    position: relative;
+  }
+  header nav ul li.active::after, header nav ul li:hover::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: white;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header nav #panier {
+    display: flex;
+    align-items: center;
+  }
+  header nav #panier .prix {
+    text-align: right;
+    flex: 1;
+  }
+  header nav #panier .prix p {
+    font-size: 0.8rem;
+  }
+  header nav #panier .prix p, header nav #panier .prix p a {
+    color: silver;
+  }
+  header nav #panier .icone {
+    padding: 10px;
+    position: relative;
+  }
+  header nav #panier .icone i {
+    font-size: 3rem;
+  }
+  header nav #panier .icone span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffc851;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: #121618;
+    line-height: 20px;
+  }
+  header #diaporama {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  header #diaporama img {
+    width: 33%;
+    padding: 50px;
+  }
+  header #diaporama div {
+    width: 33%;
+    text-align: left;
+  }
+  header #diaporama div h1 {
+    font-size: 4rem;
+  }
+  header #diaporama div h2 {
+    margin: 0 0 3rem;
+    font-size: 2rem;
+  }
+
+  main #services, main #pizzas div {
+    display: flex;
+    padding: 2rem 17%;
+  }
+  main #services article, main #pizzas div article {
+    flex: 1;
+    padding: 10px;
+  }
 }/*# sourceMappingURL=styles.css.map */

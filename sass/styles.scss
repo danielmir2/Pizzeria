@@ -189,7 +189,7 @@ footer{
     padding: 2rem .5rem;
     color: white;
     img{
-        width: 50%;
+        height: 90px;
     }
     address{
         font-style: normal;
@@ -207,3 +207,136 @@ footer{
         }
     }
 }
+
+// Fin vue mobile
+
+// Vue Ordi
+@media screen and (min-width: 1024px) {
+    :root{
+        font-size: 16px;
+    }
+    header{
+        nav{
+            display: flex;
+            align-items: center;
+            address, #panier{
+                flex: 1;
+            }
+            section{
+                flex: 4;
+            }
+            address, #panier, ul{
+                display: block;
+            }
+            label{
+                display: none;
+            }
+            address{
+                display: flex;
+                align-items: center;
+                text-align: left;
+                span{
+                    font-size: 3rem;
+                }
+                p{
+                    color: silver;
+                    font-size: .8rem;
+                    flex: 1;
+                    &::first-line{
+                        color: white;
+                        font-size: 1rem;
+                    }
+                }
+            }
+            ul{
+                padding: 0;
+                margin-top: 40px;
+                li{
+                    display: inline;
+                    margin: 25px;
+                    position: relative;
+                    &.active, &:hover{
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            width: 10px;
+                            height: 2px;
+                            background-color: white;
+                            bottom: -10px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+            }
+            #panier{
+                display: flex;
+                align-items: center;
+                .prix{
+                    text-align: right;
+                    flex: 1;
+                    p{
+                        font-size: .8rem;
+                        &, a{
+                            color: silver;
+                        }
+                    }
+                }
+                .icone{
+                    padding: 10px;
+                    position: relative;
+                    i{
+                        font-size: 3rem;
+                    }
+                    span{
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        background-color: #ffc851;
+                        border-radius: 50%;
+                        width: 20px;
+                        height: 20px;
+                        color: #121618;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+        #diaporama{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 33%;
+                padding: 50px;
+            }
+            div{
+                width: 33%;
+                text-align: left;
+                h1{
+                    font-size: 4rem;
+                }
+                h2{
+                    margin: 0 0 3rem;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    main{
+        #services, #pizzas div{
+            display: flex;
+            padding: 2rem 17%;
+            article{
+                flex: 1;
+                padding: 10px;
+            }
+            // display: grid;
+            // grid-template-columns: repeat(3, 1fr);
+            // gap: 20px;
+            // padding: 2rem 17%;
+        }
+    }
+} // Fin media query
